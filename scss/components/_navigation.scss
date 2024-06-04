@@ -1,0 +1,26 @@
+/* =============
+    Navigation
+============= */
+
+a:link, a:visited{
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+#main-nav{
+    background-color: #8F2D56;
+    padding: 24px 16px;
+    margin-top: 16px;
+
+    ul{
+        li{
+            a:link, a:visited{
+                color: white;
+                font-size: 24px 0;
+                font-family: "Montserrat", sans-serif;
+                display: inline-block;
+
+            }
+        }
+    }
+}

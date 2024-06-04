@@ -1,0 +1,69 @@
+/* =============
+    Header
+============= */
+header{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "burger-container" "contact-container"
+    "main-nav" "main-nav";
+    padding: 24px 0;
+    position: fixed;
+    width: 100%;
+
+    @include md{
+        grid-template-areas: 
+        "logo-container"
+        "main-nav" "contact-container"
+    }
+
+    #burger-container{
+        grid-area: burger-container;
+        padding-left: 16px;
+        display: flex;  
+        align-items: center;
+
+        @include md{
+            display: none;
+        }
+
+        button{
+            padding: 0;
+            color: black;
+        }
+    }
+
+    #contact-container{
+        grid-area: contact-container; 
+        display: flex;  
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 16px;
+    }
+
+    #main-nav{
+        grid-area: main-nav;
+    
+        @include md{
+            display: block;
+        }
+    }
+
+    #logo-container{
+        display: none;
+
+        @include md{
+            display: block;
+            grid-area: logo-container;
+            text-align: center;
+            padding: 24px 0;
+            img{
+                width: 5%;
+            }
+        }
+    }
+}
+
+.hideMainNavatMobile{
+    display: none;
+}
