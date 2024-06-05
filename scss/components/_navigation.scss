@@ -2,24 +2,23 @@
     Navigation
 ============= */
 
-a:link, a:visited{
+a:link, a:visited {
     text-decoration: none;
     transition: 0.25s;
 }
 
-#main-nav{
-    background-color: #8F2D56;
+#main-nav {
+    background-color: white;
     padding: 24px 16px;
-    margin-top: 16px;
+    margin-top: 8px;
 
-    ul{
-        li{
-            a:link, a:visited{
-                color: white;
-                font-size: 24px 0;
-                font-family: "Montserrat", sans-serif;
+    ul {
+        li {
+            a:link, a:visited {
+                color: #585858;
+                font-size: 24px;
+                font-family: "Prata", serif;
                 display: inline-block;
-
             }
         }
     }

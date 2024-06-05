@@ -7,11 +7,13 @@ button{
 }
 
 .primary-button{
-    background-color: #8F2D56;
+    background-color: white;
     padding: 8px 16px;
-    font-weight: 500;
+    font-weight: 700;
     font-size: rem-calc(16);
-    color: white;
+    color: #222;
     border-radius: 25px;
-    font-family: "Montserrat", sans-serif;
+    border: 1px solid;
+    border-color: #222;
+    font-family: "Prata", serif;
 }
