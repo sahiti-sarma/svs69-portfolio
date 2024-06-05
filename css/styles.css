@@ -544,6 +544,10 @@ header #logo-container {
 /* =============
     Footer
 ============= */
+#hero {
+  background-image: url("../img/home-hero.jpeg");
+}
+
 #about-container {
   display: -ms-grid;
   display: grid;
