@@ -1,12 +1,14 @@
-.resumeContent {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; // Adjust the gap as needed
-    margin-top: 100px; // Adjust the margin to create space below the header
-    padding: 20px; // Optional: Add padding around the main content
-    align-items: center; // Center the items horizontally
-    
+
+  .resumeContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px; 
+    padding-top: 100px;
+  
     @media (min-width: 768px) {
       margin-top: 150px; // Adjust for larger screens if necessary
     }
-}
+  
+    
+  }
+  
