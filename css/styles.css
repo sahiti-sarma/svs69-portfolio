@@ -410,7 +410,7 @@ a:link, a:visited {
 }
 @media (min-width: 768px) {
   #main-nav {
-    background-color: #fff;
+    background-color: transparent;
     margin-top: 0px;
   }
 }
@@ -439,6 +439,20 @@ a:link, a:visited {
   #main-nav ul li a:link, #main-nav ul li a:visited {
     padding: 8px 12px;
     font-size: 0.875rem;
+    font-weight: 600;
+  }
+}
+@media (min-width: 1024px) {
+  #main-nav ul li a:link, #main-nav ul li a:visited {
+    padding: 8px 12px;
+    font-size: 0.9375rem;
+    font-weight: 600;
+  }
+}
+@media (min-width: 1200px) {
+  #main-nav ul li a:link, #main-nav ul li a:visited {
+    padding: 8px 12px;
+    font-size: 1rem;
     font-weight: 600;
   }
 }
@@ -553,3 +567,23 @@ header #logo-container {
 /* =============
     Footer
 ============= */
+#home-hero {
+  background-image: url("../img/home-hero.jpeg");
+  height: 50vh;
+  background-size: cover;
+}
+@media (min-width: 768px) {
+  #home-hero {
+    height: 75vh;
+  }
+}
+@media (min-width: 1024px) {
+  #home-hero {
+    height: 90vh;
+  }
+}
+@media (min-width: 1200px) {
+  #home-hero {
+    height: 100vh;
+  }
+}

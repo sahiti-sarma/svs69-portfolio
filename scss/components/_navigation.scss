@@ -14,7 +14,7 @@ a:link, a:visited{
     margin-top: 16px;
 
     @include md{
-        background-color: #fff;
+        background-color: transparent;
         margin-top: 0px;
     }
     
@@ -37,6 +37,18 @@ a:link, a:visited{
                 @include md{
                     padding: 8px 12px;
                     font-size: rem-calc(14);
+                    font-weight: 600;
+                }
+
+                @include lg{
+                    padding: 8px 12px;
+                    font-size: rem-calc(15);
+                    font-weight: 600;
+                }
+
+                @include xl{
+                    padding: 8px 12px;
+                    font-size: rem-calc(16);
                     font-weight: 600;
                 }
 

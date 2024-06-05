@@ -1,0 +1,18 @@
+#home-hero{
+    background-image: url("../img/home-hero.jpeg");
+    height: 50vh;
+    background-size: cover;
+
+    @include md{
+        height: 75vh;
+    }
+
+    @include lg{
+        height: 90vh;
+    }
+
+    @include xl{
+        height: 100vh;
+    }
+}
+
