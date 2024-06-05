@@ -2,24 +2,53 @@
     Navigation
 ============= */
 
-a:link, a:visited {
+a:link, a:visited{
     text-decoration: none;
     transition: 0.25s;
 }
 
-#main-nav {
-    background-color: white;
+#main-nav{
+    background-color: #fff;
     padding: 24px 16px;
-    margin-top: 8px;
+    font-family: "Prata", serif;
+    margin-top: 16px;
 
-    ul {
-        li {
-            a:link, a:visited {
-                color: #585858;
-                font-size: 24px;
-                font-family: "Prata", serif;
-                display: inline-block;
+    @include md{
+        background-color: #fff;
+        margin-top: 0px;
+    }
+    
+    ul{
+        @include md{
+            display: flex;
+            align-items: center;
+        }
+        li{
+
+            @include md{
+                border-right: 1px solid #aeaeb2;
             }
+            a:link, a:visited{
+                font-size: rem-calc(18);
+                padding: 8px;
+                display: inline-block;
+                color: #585858;
+
+                @include md{
+                    padding: 8px 12px;
+                    font-size: rem-calc(14);
+                    font-weight: 600;
+                }
+
+                &:hover, &:active{
+                    color: #222;
+                    font-size: rem-calc(20);
+                }
+            }
+        }
+
+        #last-link{
+            border: none;
         }
     }
 }

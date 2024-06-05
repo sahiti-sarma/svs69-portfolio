@@ -1,19 +1,28 @@
 /* =============
     Buttons
 ============= */
+
 button{
-    border: none;
     background-color: transparent;
+    border: none;
+
 }
 
 .primary-button{
-    background-color: white;
-    padding: 8px 16px;
-    font-weight: 700;
-    font-size: rem-calc(16);
-    color: #222;
-    border-radius: 25px;
-    border: 1px solid;
-    border-color: #222;
+    background-color: #fff;
+    padding: 8px 24px;
     font-family: "Prata", serif;
+    font-weight: 500;
+    color: #222;
+    border-color: #222;
+    border: 1px solid;
+    border-radius: 25px;
+    font-size: rem-calc(14);
+    transition: 0.25s;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #222;
+        color: white;
+    }
 }

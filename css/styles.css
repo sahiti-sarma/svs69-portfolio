@@ -344,39 +344,33 @@ ul li {
 ============= */
 body {
   font-family: "Manrope", sans-serif;
-  color: #222;
-}
-
-h1, h2, h3, h4, h5 {
-  font-family: "Prata", serif;
-  padding: 0;
-  margin: 0;
-  color: #585858;
-}
-
-p {
-  padding: 0;
-  margin: 0;
 }
 
 /* =============
     Buttons
 ============= */
 button {
-  border: none;
   background-color: transparent;
+  border: none;
 }
 
 .primary-button {
-  background-color: white;
-  padding: 8px 16px;
-  font-weight: 700;
-  font-size: 1rem;
-  color: #222;
-  border-radius: 25px;
-  border: 1px solid;
-  border-color: #222;
+  background-color: #fff;
+  padding: 8px 24px;
   font-family: "Prata", serif;
+  font-weight: 500;
+  color: #222;
+  border-color: #222;
+  border: 1px solid;
+  border-radius: 25px;
+  font-size: 0.875rem;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.primary-button:hover {
+  background-color: #222;
+  color: white;
 }
 
 /* =============
@@ -409,47 +403,85 @@ a:link, a:visited {
 }
 
 #main-nav {
-  background-color: white;
+  background-color: #fff;
   padding: 24px 16px;
-  margin-top: 8px;
+  font-family: "Prata", serif;
+  margin-top: 16px;
+}
+@media (min-width: 768px) {
+  #main-nav {
+    background-color: #fff;
+    margin-top: 0px;
+  }
+}
+@media (min-width: 768px) {
+  #main-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  #main-nav ul li {
+    border-right: 1px solid #aeaeb2;
+  }
 }
 #main-nav ul li a:link, #main-nav ul li a:visited {
-  color: #585858;
-  font-size: 24px;
-  font-family: "Prata", serif;
+  font-size: 1.125rem;
+  padding: 8px;
   display: inline-block;
+  color: #585858;
+}
+@media (min-width: 768px) {
+  #main-nav ul li a:link, #main-nav ul li a:visited {
+    padding: 8px 12px;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+}
+#main-nav ul li a:link:hover, #main-nav ul li a:link:active, #main-nav ul li a:visited:hover, #main-nav ul li a:visited:active {
+  color: #222;
+  font-size: 1.25rem;
+}
+#main-nav ul #last-link {
+  border: none;
 }
 
+/* =============
+    Header
+============= */
 header {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto;
-  grid-template-columns: auto;
-      grid-template-areas: "logo-container" "burger-container" "contact-container" "main-nav";
+  -ms-grid-columns: 20% auto;
+  grid-template-columns: 20% auto;
+      grid-template-areas: "burger-container contact-container" "main-nav main-nav";
   padding: 24px 0;
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+@media (min-width: 768px) {
+  header {
+    -ms-grid-columns: 60% auto;
+    grid-template-columns: 60% auto;
+        grid-template-areas: "logo-container logo-container" "main-nav contact-container";
+  }
 }
 header #burger-container {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: burger-container;
   padding-left: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 header #burger-container button {
-  padding: 0;
-  color: black;
+  padding: 8px 0;
+  color: #222;
 }
 @media (min-width: 768px) {
   header #burger-container {
@@ -457,40 +489,30 @@ header #burger-container button {
   }
 }
 header #contact-container {
-  -ms-grid-row: 2;
-  -ms-grid-column: 3;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: contact-container;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: flex;
   -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-right: 16px;
-}
-@media (min-width: 768px) {
-  header #contact-container {
-    padding-right: 8px;
-  }
+  height: 100%;
 }
 header #main-nav {
   -ms-grid-row: 2;
-  -ms-grid-row-span: 2;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: main-nav;
 }
 @media (min-width: 768px) {
   header #main-nav {
     display: block;
-    -ms-flex-item-align: start;
-        align-self: flex-start;
-    justify-self: flex-start;
-    padding-left: 8px;
   }
 }
 header #logo-container {
@@ -501,190 +523,33 @@ header #logo-container {
     display: block;
     grid-area: logo-container;
     text-align: center;
-    padding: 24px 0;
+    padding-bottom: 8px;
   }
   header #logo-container img {
     width: 5%;
   }
 }
+@media (min-width: 768px) {
+  header #contact-container {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  header #main-nav {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  header #logo-container {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+  }
+}
 
-.hideMainNavatMobile {
+.hideMainNav {
   display: none;
 }
 
-@media (max-width: 768px) {
-  header {
-        grid-template-areas: "burger-container contact-container" "main-nav main-nav";
-    -ms-grid-columns: 1fr auto;
-    grid-template-columns: 1fr auto;
-  }
-  #contact-container {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-  #burger-container {
-    display: none;
-  }
-  #main-nav {
-    background-color: white;
-    padding: 24px 16px;
-    margin-top: 16px;
-    width: 100%;
-    margin-top: 16px;
-  }
-  #main-nav ul {
-    display: block;
-    text-align: center;
-  }
-  #main-nav ul li {
-    margin: 10px 0;
-  }
-}
 /* =============
     Footer
 ============= */
-#hero {
-  background-image: url("../img/home-hero.jpeg");
-}
-
-#about-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto 20px 1fr;
-  grid-template-columns: auto 1fr;
-  gap: 20px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 20px;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-#headshot-container img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-#text-container {
-  margin: 0;
-  padding-top: 100px;
-}
-
-.resumeContent {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  padding-top: 100px;
-}
-@media (min-width: 768px) {
-  .resumeContent {
-    margin-top: 150px;
-  }
-}
-
-#contact-form {
-  background-color: var(--seaFoamGreen);
-  padding: 32px 16px;
-}
-#contact-form form {
-  display: -ms-grid;
-  display: grid;
-  gap: 16px;
-  -ms-grid-rows: 90px 16px 90px 16px 200px 16px auto;
-  grid-template-rows: 90px 90px 200px auto;
-}
-@media (min-width: 768px) {
-  #contact-form form {
-    padding: 0 10vw;
-    -ms-grid-columns: 50% auto;
-    grid-template-columns: 50% auto;
-    -ms-grid-rows: 8vh 16vh auto;
-    grid-template-rows: 8vh 16vh auto;
-        grid-template-areas: "name email" "message message" ". send-button";
-  }
-}
-#contact-form form div {
-  background-color: transparent;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-#contact-form form div input {
-  width: 100%;
-  padding-bottom: 5px;
-  padding-left: 8px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 25px;
-}
-#contact-form form div textarea {
-  padding-top: 8px;
-  height: 100%;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-#contact-form form div ::-webkit-input-placeholder {
-  color: #585858;
-  opacity: 1;
-}
-#contact-form form div ::-moz-placeholder {
-  color: #585858;
-  opacity: 1;
-}
-#contact-form form div :-ms-input-placeholder {
-  color: #585858;
-  opacity: 1;
-}
-#contact-form form div ::-ms-input-placeholder {
-  color: #585858;
-  opacity: 1;
-}
-#contact-form form div ::placeholder {
-  color: #585858;
-  opacity: 1;
-}
-#contact-form form div ::-ms-input-placeholder {
-  color: #585858;
-}
-@media (min-width: 768px) {
-  #contact-form form #contact-name {
-    grid-area: name;
-  }
-}
-@media (min-width: 768px) {
-  #contact-form form #contact-email {
-    grid-area: email;
-  }
-}
-#contact-form form #contact-message {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-@media (min-width: 768px) {
-  #contact-form form #contact-message {
-    grid-area: message;
-  }
-}
-#contact-form form .primary-button {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-@media (min-width: 768px) {
-  #contact-form form .primary-button {
-    grid-area: send-button;
-  }
-}

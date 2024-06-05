@@ -1,104 +1,81 @@
-header {
+/* =============
+    Header
+============= */
+header{
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 20% auto;
     grid-template-areas: 
-      "logo-container" 
-      "burger-container" 
-      "contact-container" 
-      "main-nav";
+    "burger-container contact-container"
+    "main-nav main-nav";
     padding: 24px 0;
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
-    align-items: center;
-    z-index: 1000; // Ensure header is above other elements
-  
-    #burger-container {
-      grid-area: burger-container;
-      padding-left: 16px;
-      display: inline-flex;
-      align-items: center;
-  
-      button {
-        padding: 0;
-        color: black;
-      }
-  
-      @media (min-width: 768px) {
+
+    @include md{
+        grid-template-columns: 60% auto;
+        grid-template-areas: 
+        "logo-container logo-container"
+        "main-nav contact-container"
+
+    }
+
+
+
+
+    #burger-container{
+        grid-area: burger-container;
+        padding-left: 16px;
+
+            button{
+                padding: 8px 0;
+                color: #222;
+            }
+
+            @include md{
+                display: none;
+            }
+    }
+
+    #contact-container{
+        grid-area: contact-container;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 16px;
+        height: 100%;
+
+
+    }
+
+    #main-nav{
+        grid-area: main-nav;
+        
+        @include md{
+            display: block;
+        }
+
+    }
+
+    #logo-container{
         display: none;
-      }
-    }
-  
-    #contact-container {
-      grid-area: contact-container;
-      display: inline-flex;
-      justify-content: flex-end;
-      align-items: center;
-      padding-right: 16px;
-  
-      @media (min-width: 768px) {
-        padding-right: 8px;
-      }
-    }
-  
-    #main-nav {
-      grid-area: main-nav;
-  
-      @media (min-width: 768px) {
-        display: block;
-        align-self: flex-start;
-        justify-self: flex-start;
-        padding-left: 8px;
-      }
-    }
-  
-    #logo-container {
-      display: none;
-  
-      @media (min-width: 768px) {
-        display: block;
-        grid-area: logo-container;
-        text-align: center;
-        padding: 24px 0;
-  
-        img {
-          width: 5%;
+
+        @include md{
+            display: block;
+            grid-area: logo-container;
+            text-align: center;
+            padding-bottom: 8px;
+            
+            img {
+                width: 5%;
+              }
+
         }
-      }
     }
-  }
-  
-  .hideMainNavatMobile {
+}
+
+.hideMainNav{
     display: none;
-  }
-  
-  @media (max-width: 768px) {
-    header {
-      grid-template-areas: 
-        "burger-container contact-container"
-        "main-nav main-nav";
-      grid-template-columns: 1fr auto;
-    }
-  
-    #contact-container {
-      justify-content: flex-end;
-    }
-  
-    #burger-container {
-      display: none;
-    }
-  
-    #main-nav {
-      background-color: white;
-      padding: 24px 16px;
-      width: 100%;
-  
-      ul {
-        display: block;
-        text-align: center;
-  
-        li {
-          margin: 10px 0;
-        }
-      }
-    }
-  }
+}
