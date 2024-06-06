@@ -924,10 +924,28 @@ header #logo-container {
   -ms-transform: translate(-50%, -50%);
 }
 
-#fa-solid fa-quote-left {
-  color: #206460;
+.quote {
+  background-color: #206460;
+}
+@media (min-width: 768px) {
+  .quote {
+    padding: 24px;
+  }
 }
 
-#quote {
-  color: #206460;
+#quote-icon {
+  color: #fff;
+  margin-top: 16px;
+  padding-top: 24px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#quote-text {
+  color: #fff;
+  text-align: center;
+  font-size: 1.1875rem;
+  padding-bottom: 24px;
+  line-height: 48px;
+  contain: content;
 }

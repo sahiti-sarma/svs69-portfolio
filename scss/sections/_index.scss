@@ -1,7 +1,27 @@
-#fa-solid fa-quote-left{
-    color: #206460;
+.quote{
+    background-color: #206460;
+    
+    @include md{
+        padding: 24px;
+    }
+}
+#quote-icon{
+    color: #fff;
+    margin-top: 16px;
+    padding-top: 24px;
+    text-align: center;
+    font-size: rem-calc(24);
 }
 
-#quote{
-    color: #206460; 
+#quote-text{
+    color: #fff;
+    text-align: center;
+    font-size: rem-calc(19);
+    padding-bottom: 24px;
+    line-height: 48px;
+    contain: content;
+
 }
+
+
+
