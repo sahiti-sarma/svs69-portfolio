@@ -923,3 +923,11 @@ header #logo-container {
           transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
+
+#fa-solid fa-quote-left {
+  color: #206460;
+}
+
+#quote {
+  color: #206460;
+}
