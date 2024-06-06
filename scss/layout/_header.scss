@@ -7,12 +7,13 @@ header{
     grid-template-areas: 
     "burger-container contact-container"
     "main-nav main-nav";
-    padding: 24px 0;
+    padding: 24px 0 0;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
+    background-color: #fff;
 
     @include md{
         grid-template-columns: 60% auto;
@@ -21,8 +22,6 @@ header{
         "main-nav contact-container"
 
     }
-
-
 
 
     #burger-container{
@@ -46,7 +45,6 @@ header{
         align-items: center;
         padding-right: 16px;
         height: 100%;
-
 
     }
 

@@ -2,6 +2,8 @@
     background-image: url("../img/home-hero.jpeg");
     height: 50vh;
     background-size: cover;
+    margin-top: 80px;
+    
 
     @include md{
         height: 75vh;
@@ -12,7 +14,77 @@
     }
 
     @include xl{
-        height: 100vh;
+        height: 120vh;
+    }
+}
+
+
+#associations-hero{
+    background-image: url("../img/associations-hero.png");
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    margin-top: 74px;
+
+    @include md{
+        height: 60vh;
+        margin-top: 140px;
+    }
+
+    @include lg{
+        height: 70vh;
+        margin-top: 150px;
+    }
+
+    @include xl{
+        height: 75vh;
+        margin-top: 175px;
+    }
+}
+
+#projects-hero{
+    background-image: url("../img/projects-hero.png");
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    margin-top: 74px;
+
+    @include md{
+        height: 40vh;
+        margin-top: 140px;
+    }
+
+    @include lg{
+        height: 50vh;
+        margin-top: 150px;
+    }
+
+    @include xl{
+        height: 60vh;
+        margin-top: 175px;
+    }
+}
+
+#about-hero{
+    background-image: url("../img/about-hero.png");
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    margin-top: 74px;
+
+    @include md{
+        height: 40vh;
+        margin-top: 140px;
+    }
+
+    @include lg{
+        height: 50vh;
+        margin-top: 150px;
+    }
+
+    @include xl{
+        height: 60vh;
+        margin-top: 175px;
     }
 }
 

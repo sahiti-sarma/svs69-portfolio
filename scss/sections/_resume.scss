@@ -1,0 +1,64 @@
+.resumeContent{
+    text-align: left;
+    margin-top: 200px;
+}
+
+#resume-title{
+    text-align: center;
+    color: #206460;
+}
+
+#downloadResume{
+    text-decoration: underline; 
+    text-align: center; 
+    color: #206460; 
+    font-family: "Prata", serif;
+    font-size: rem-calc(16);
+  
+    &:hover{
+      color: #92beba;
+    }  
+}
+
+#professionalSummary{
+    padding: 8px 16px;
+    border-bottom: 1px solid #aeaeb2;
+
+    @include md{
+        padding: 0 24px;
+    }
+}
+
+#education{
+    padding: 8px 16px;
+    border-bottom: 1px solid #aeaeb2;
+
+    @include md{
+        padding: 0 24px;
+    }
+}
+
+.skills{
+    padding: 8px 16px;
+    border-bottom: 1px solid #aeaeb2;
+}
+    
+    
+
+#experience{
+    padding: 8px 16px;
+    border-bottom: 1px solid #aeaeb2;
+
+
+    @include md{
+        padding: 0 24px;
+    }
+}
+
+#relevantCoursework{
+    padding: 0 16px;
+
+    @include md{
+        padding: 0 24px;
+    }
+}

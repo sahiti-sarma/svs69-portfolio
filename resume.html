@@ -41,10 +41,13 @@
     
     
     <main class="resumeContent">
-        <a id="downloadResume" href="Sarma_Resume.docx" download>
-            <h2><i class="fa-regular fa-circle-down"></i>DOWNLOAD RESUME</h2>
-        </a>
         
+        <div id="resume-title">
+            <h1> RESUME</h1>
+        </div>
+        <a id="downloadResume" href="Sarma_Resume.docx" download>
+            <p><i class="fa-regular fa-circle-down"></i>DOWNLOAD RESUME</p>
+        </a>
         <div id="professionalSummary">
             <h2>PROFESSIONAL SUMMARY</h2>
             <p>Drexel graduate student specializing in UX design with over 1 year of practical experience in the field. Possesses a robust background in research and psychology, enabling a nuanced approach to user experience challenges. Demonstrated skills in conducting user research, contributing valuable insights to the UX design process. Seeking a career transition to apply UX expertise and research acumen in a dynamic design role.</p>
@@ -54,15 +57,14 @@
             <p><strong>MS in Human Computer Interaction/ User Experience, Drexel University</strong><br>Philadelphia, PA | GPA: 4.0 | Expected June 2024</p>
             <p><strong>BS in Chemistry, University of Illinois at Urbana-Champaign</strong><br>Urbana, IL | August 2022<br>Minor in Psychology</p>
         </div>
-        <div id="skills">
-            <h2>SKILLS</h2>
-            <ul>
-                <li>Figma</li>
-                <li>InVision</li>
-                <li>Adobe Creative Suite</li>
-                <li>Miro</li>
-                <li>HTML, CSS</li>
-                <li>JIRA</li>
+        <div class="skills">
+            <h2 id="skills-header">SKILLS</h2>
+            <ul id="skills-grid">
+                <li id="figma"><i class="fa-brands fa-figma"></i> Figma</li>
+                <li id="invision"><i class="fa-brands fa-invision"></i> InVision</li>
+                <li id="adobe"><i class="fa-solid fa-pen-fancy"></i> Adobe</li>
+                <li id="microsoft"><i class="fa-brands fa-microsoft"></i> Microsoft 365</li>
+                <li id="code"><i class="fa-solid fa-code"></i> HTML/CSS</li>
             </ul>
         </div>
         <div id="experience">
@@ -97,6 +99,7 @@
                 <li>UX Research Methods</li>
             </ul>
         </div>
+        
         
     </main>
   
