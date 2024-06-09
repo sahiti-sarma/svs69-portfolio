@@ -6,5 +6,24 @@
     background-color: #aeaeb2;
     color: #fff;
     text-align: center;
-}
+    padding: 16px 0 32px 0;
+    font-size: rem-calc(18);
 
+    a{
+        color: white;
+        border-right: 1px solid #fff;
+        margin: 8px;
+        padding-right: 4px;
+        
+        &:hover, &:active{
+            transition: .5s ease;
+            color: #206460;
+        }
+
+        
+    }
+
+    #css{
+        border: none;
+    }
+}

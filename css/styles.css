@@ -586,6 +586,22 @@ header #logo-container {
   background-color: #aeaeb2;
   color: #fff;
   text-align: center;
+  padding: 16px 0 32px 0;
+  font-size: 1.125rem;
+}
+#footer-container a {
+  color: white;
+  border-right: 1px solid #fff;
+  margin: 8px;
+  padding-right: 4px;
+}
+#footer-container a:hover, #footer-container a:active {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  color: #206460;
+}
+#footer-container #css {
+  border: none;
 }
 
 #home-hero {
@@ -1129,7 +1145,7 @@ header #logo-container {
 }
 
 .quote {
-  background-color: #206460;
+  background-color: #92beba;
 }
 @media (min-width: 768px) {
   .quote {
