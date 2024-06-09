@@ -12,18 +12,27 @@
     
 
     #intro-container{
-        grid-area: intro-container;
-        background-color: #92beba;
+        grid-area: intro-container;;
         padding: 16px 32px;
         h1{
             text-align: center;
-            background-color: #92beba;
+
+            @include md{
+                text-align: left; 
+            }
 
         }
     
         p{
             text-align: center;
-            background-color: #92beba;
+            line-height: 200%;
+            font-size: rem-calc(18);
+            color: #585858;
+
+            @include md{
+                text-align: left; 
+            }
+
         }
     }
 
@@ -35,7 +44,9 @@
             img{
                 width: 30vh;
                 margin: 24px; 
-                border-radius: 5px;
+                padding: 8px;
+                border-radius: 50%;
+                border: 8px solid #cc8898;
 
                 @include md{
                     width: 40vh;
@@ -59,4 +70,22 @@
         
     }
 
-    
+#favorites{
+    text-align: center;
+}
+
+#spotify {
+    text-align: center; /* Center the content horizontally */
+}
+
+#spotify h3 {
+    margin-bottom: 10px; /* Add some space below the heading */
+}
+
+#spotify iframe {
+    border-radius: 12px; 
+    max-width: 100%; 
+    width: 50%; /* Set the width of the iframe */
+    height: 50vh; /* Set the height of the iframe */
+    margin: 0 auto; /* Center the iframe horizontally */
+}

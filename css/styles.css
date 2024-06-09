@@ -582,6 +582,12 @@ header #logo-container {
 /* =============
     Footer
 ============= */
+#footer-container {
+  background-color: #aeaeb2;
+  color: #fff;
+  text-align: center;
+}
+
 #home-hero {
   background-image: url("../img/home-hero.jpeg");
   height: 50vh;
@@ -683,7 +689,7 @@ header #logo-container {
 }
 
 .resumeContent {
-  text-align: left;
+  text-align: center;
   margin-top: 200px;
 }
 
@@ -704,12 +710,13 @@ header #logo-container {
 }
 
 #professionalSummary {
+  margin-top: 5vh;
   padding: 8px 16px;
   border-bottom: 1px solid #aeaeb2;
 }
 @media (min-width: 768px) {
   #professionalSummary {
-    padding: 0 24px;
+    padding: 0 20vw;
   }
 }
 
@@ -724,18 +731,119 @@ header #logo-container {
 }
 
 .skills {
-  padding: 8px 16px;
+  padding: 24px 24px;
   border-bottom: 1px solid #aeaeb2;
 }
 
+#skills-header {
+  margin-bottom: 24px;
+}
+
+#skills-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+}
+#skills-grid li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+#figma {
+  background-color: #cc8898;
+  color: white;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 5px;
+}
+#figma:hover, #figma:active {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  background-color: #206460;
+}
+
+#invision {
+  background-color: #cc8898;
+  color: white;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 5px;
+}
+#invision:hover, #invision:active {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  background-color: #206460;
+}
+
+#adobe {
+  background-color: #cc8898;
+  color: white;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 5px;
+}
+#adobe:hover, #adobe:active {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  background-color: #206460;
+}
+
+#microsoft {
+  background-color: #cc8898;
+  color: white;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 5px;
+}
+#microsoft:hover, #microsoft:active {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  background-color: #206460;
+}
+
+#code {
+  background-color: #cc8898;
+  color: white;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 5px;
+}
+#code:hover, #code:active {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  background-color: #206460;
+}
+
 #experience {
+  margin-bottom: 24px;
   padding: 8px 16px;
   border-bottom: 1px solid #aeaeb2;
+}
+#experience li {
+  list-style: circle;
 }
 @media (min-width: 768px) {
   #experience {
     padding: 0 24px;
   }
+}
+
+#experience ul {
+  list-style-type: disk;
+  padding-left: 10%;
+  text-align: left;
+  line-height: 30px;
+}
+#experience ul li {
+  margin-bottom: 16px;
 }
 
 #relevantCoursework {
@@ -762,16 +870,26 @@ header #logo-container {
 }
 #about-container #intro-container {
   grid-area: intro-container;
-  background-color: #92beba;
   padding: 16px 32px;
 }
 #about-container #intro-container h1 {
   text-align: center;
-  background-color: #92beba;
+}
+@media (min-width: 768px) {
+  #about-container #intro-container h1 {
+    text-align: left;
+  }
 }
 #about-container #intro-container p {
   text-align: center;
-  background-color: #92beba;
+  line-height: 200%;
+  font-size: 1.125rem;
+  color: #585858;
+}
+@media (min-width: 768px) {
+  #about-container #intro-container p {
+    text-align: left;
+  }
 }
 #about-container #headshot-container {
   grid-area: headshot-container;
@@ -795,7 +913,9 @@ header #logo-container {
 #about-container #headshot-container img {
   width: 30vh;
   margin: 24px;
-  border-radius: 5px;
+  padding: 8px;
+  border-radius: 50%;
+  border: 8px solid #cc8898;
 }
 @media (min-width: 768px) {
   #about-container #headshot-container img {
@@ -816,6 +936,26 @@ header #logo-container {
   }
 }
 
+#favorites {
+  text-align: center;
+}
+
+#spotify {
+  text-align: center; /* Center the content horizontally */
+}
+
+#spotify h3 {
+  margin-bottom: 10px; /* Add some space below the heading */
+}
+
+#spotify iframe {
+  border-radius: 12px;
+  max-width: 100%;
+  width: 50%; /* Set the width of the iframe */
+  height: 50vh; /* Set the height of the iframe */
+  margin: 0 auto; /* Center the iframe horizontally */
+}
+
 #associations-title {
   text-align: center;
   margin-top: 32px;
@@ -829,8 +969,8 @@ header #logo-container {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  -ms-grid-columns: 2, 1fr;
-  grid-template-columns: 2, 1fr;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
       grid-template-areas: "active-minds uxpa" "interaction-design accessibility";
 }
 #associations #active-minds {
@@ -840,10 +980,25 @@ header #logo-container {
   text-align: center;
   margin: 16px 8px;
   background-color: white;
+  color: #222;
   border-radius: 10px;
+  min-height: 250px;
 }
 #associations #active-minds p {
   padding: 0 4px;
+}
+#associations #active-minds:hover, #associations #active-minds:active {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  background-color: #206460;
+  color: white;
+}
+@media (min-width: 768px) {
+  #associations #active-minds {
+    min-height: 150px;
+    margin: 16px 48px;
+    padding: 0 72px;
+  }
 }
 #associations #uxpa {
   -ms-grid-row: 1;
@@ -852,10 +1007,25 @@ header #logo-container {
   text-align: center;
   margin: 16px 8px;
   background-color: white;
+  color: #222;
   border-radius: 10px;
+  min-height: 250px;
 }
 #associations #uxpa p {
   padding: 0 4px;
+}
+#associations #uxpa:hover, #associations #uxpa:active {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  background-color: #206460;
+  color: white;
+}
+@media (min-width: 768px) {
+  #associations #uxpa {
+    min-height: 150px;
+    margin: 16px 48px;
+    padding: 0 72px;
+  }
 }
 #associations #interaction-design {
   -ms-grid-row: 2;
@@ -864,10 +1034,25 @@ header #logo-container {
   text-align: center;
   margin: 16px 8px;
   background-color: white;
+  color: #222;
   border-radius: 10px;
+  min-height: 250px;
 }
 #associations #interaction-design p {
   padding: 0 4px;
+}
+#associations #interaction-design:hover, #associations #interaction-design:active {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  background-color: #206460;
+  color: white;
+}
+@media (min-width: 768px) {
+  #associations #interaction-design {
+    min-height: 150px;
+    margin: 16px 48px;
+    padding: 0 72px;
+  }
 }
 #associations #accessibility {
   -ms-grid-row: 2;
@@ -876,52 +1061,25 @@ header #logo-container {
   text-align: center;
   margin: 16px 8px;
   background-color: white;
+  color: #222;
   border-radius: 10px;
+  min-height: 250px;
 }
 #associations #accessibility p {
   padding: 0 4px;
 }
-
-.container {
-  position: relative;
-  width: 50%;
-}
-
-.image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.overlay {
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  right: 0;
-  background-color: #008CBA;
-  overflow: hidden;
-  width: 100%;
-  height: 0;
+#associations #accessibility:hover, #associations #accessibility:active {
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
-}
-
-.container:hover .overlay {
-  bottom: 0;
-  height: 100%;
-}
-
-.text {
-  white-space: nowrap;
+  background-color: #206460;
   color: white;
-  font-size: 20px;
-  position: absolute;
-  overflow: hidden;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+}
+@media (min-width: 768px) {
+  #associations #accessibility {
+    min-height: 150px;
+    margin: 16px 48px;
+    padding: 0 72px;
+  }
 }
 
 .quote {
@@ -952,5 +1110,138 @@ header #logo-container {
 
 #project-title {
   text-align: center;
-  padding-top: 16px;
+  padding: 16px 48px;
+}
+#project-title p {
+  padding: 16px 72px;
+  color: #585858;
+  font-size: 1.125rem;
+}
+@media (min-width: 768px) {
+  #project-title p {
+    padding: 16px 20%;
+  }
+}
+
+.projectGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-rows: auto 16px auto 16px auto 16px auto;
+      grid-template-areas: "nariya" "elysian" "saurya" "quikitch";
+  gap: 16px;
+  padding: 24px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .projectGrid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 24px 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: auto 24px auto;
+        grid-template-areas: "nariya elysian" "saurya quikitch";
+    gap: 24px;
+    padding-top: 32px;
+  }
+}
+
+#nariya {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: nariya;
+}
+#nariya img {
+  height: 400px;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+#nariya img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+@media (min-width: 768px) {
+  #nariya img {
+    height: 500px;
+  }
+}
+
+#elysian {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: elysian;
+}
+#elysian img {
+  height: 400px;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+#elysian img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+@media (min-width: 768px) {
+  #elysian img {
+    height: 500px;
+  }
+}
+
+#saurya {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: saurya;
+}
+#saurya img {
+  height: 400px;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+#saurya img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+@media (min-width: 768px) {
+  #saurya img {
+    height: 500px;
+  }
+}
+
+#quikitch {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  grid-area: quikitch;
+}
+
+@media (min-width: 768px) {
+  #nariya {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  #elysian {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  #saurya {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  #quikitch {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+}
+#quikitch img {
+  height: 400px;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+#quikitch img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+@media (min-width: 768px) {
+  #quikitch img {
+    height: 500px;
+  }
 }

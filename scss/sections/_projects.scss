@@ -1,5 +1,118 @@
 #project-title{
     text-align: center;
-    padding-top: 16px;
+    padding: 16px 48px;
+
+    p{
+        padding: 16px 72px;
+        color: #585858;
+        font-size: rem-calc(18);
+
+        @include md{
+            padding: 16px 20%;
+        }
+    }
+
+
+}
+
+.projectGrid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "nariya"
+    "elysian"
+    "saurya"
+    "quikitch";
+    gap: 16px;
+    padding: 24px;
+    text-align: center;
+
+
+    @include md{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "nariya elysian"
+        "saurya quikitch";
+        gap: 24px;
+        padding-top: 32px;
+    
+    }
+   
+}
+
+#nariya{
+    grid-area: nariya;
+        img{
+            height: 400px;
+            transition: 1s ease;
+
+            &:hover{
+                transform: scale(1.1);
+            }
+        }   
+
+        @include md{
+            img{
+                height: 500px;
+                
+                }
+                
+            }   
+        }
+
+
+#elysian{
+    grid-area: elysian;
+    img{
+        height: 400px;
+        transition: 1s ease;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }   
+
+    @include md{
+        img{
+            height: 500px;
+        }   
+    }
+
+}
+
+#saurya{
+    grid-area: saurya;
+    img{
+        height: 400px;
+        transition: 1s ease;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }   
+
+    @include md{
+        img{
+            height: 500px;
+        }   
+    }
+
+}
+
+#quikitch{
+    grid-area: quikitch;
+    img{
+        height: 400px;
+        transition: 1s ease;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }  
+    
+    @include md{
+        img{
+            height: 500px;
+        }   
+    }
+
 }
 
