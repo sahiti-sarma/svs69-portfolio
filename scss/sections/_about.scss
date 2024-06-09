@@ -70,10 +70,13 @@
         
     }
 
+#favorites-heading{
+    text-align: center;
+    margin: 10vh 0 36px 0;
+}
 #favorites{
     text-align: center;
     color: #206460;
-    
     
     @include md{
         display: grid;
@@ -85,16 +88,32 @@
     #spotify {
         grid-area: spotify;
         text-align: center;
+
+        @include md{
+            margin: 24px;
+        }
     }
     
     #hobby {
         grid-area: hobby;
         text-align: center;
+        img{
+            width: 300px;
+            @include md{
+                margin: 24px;
+            }
+        }
     }
     
     #art{
         grid-area: art;
         text-align: center;
+        img{
+            width: 300px;
+            @include md{
+                margin: 24px;
+            }
+        }
     } 
  }
     

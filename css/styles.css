@@ -936,6 +936,11 @@ header #logo-container {
   }
 }
 
+#favorites-heading {
+  text-align: center;
+  margin: 10vh 0 36px 0;
+}
+
 #favorites {
   text-align: center;
   color: #206460;
@@ -953,9 +958,22 @@ header #logo-container {
   grid-area: spotify;
   text-align: center;
 }
+@media (min-width: 768px) {
+  #favorites #spotify {
+    margin: 24px;
+  }
+}
 #favorites #hobby {
   grid-area: hobby;
   text-align: center;
+}
+#favorites #hobby img {
+  width: 300px;
+}
+@media (min-width: 768px) {
+  #favorites #hobby img {
+    margin: 24px;
+  }
 }
 #favorites #art {
   grid-area: art;
@@ -973,6 +991,14 @@ header #logo-container {
   #favorites #art {
     -ms-grid-row: 1;
     -ms-grid-column: 3;
+  }
+}
+#favorites #art img {
+  width: 300px;
+}
+@media (min-width: 768px) {
+  #favorites #art img {
+    margin: 24px;
   }
 }
 
