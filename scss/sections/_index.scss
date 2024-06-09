@@ -23,5 +23,43 @@
 
 }
 
+#statement{
+    text-align: center;
+    padding: 0 32px;
+    color: #585858;
+    font-size: rem-calc(18);
+    img{
+        text-align: center;
+        width: 35vh; 
+    }
+    
+    @include md{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        contain: content;
+        grid-template-areas: 
+        "personal-statement home-prof";
+
+    #personal-statement{
+        grid-area: personal-statement;
+        margin-left: 16px;
+        padding-top: 40px;
+        text-align: left;
+
+        @include lg{
+            padding-top: 10vh;
+            padding-right: 24px;
+        }
+    }
+
+    #home-prof{
+        grid-area: home-prof;
+        img{
+         width: 50vh;
+        }
+    }
+    }
+    
+}
 
 

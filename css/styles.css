@@ -1170,6 +1170,57 @@ header #logo-container {
   contain: content;
 }
 
+#statement {
+  text-align: center;
+  padding: 0 32px;
+  color: #585858;
+  font-size: 1.125rem;
+}
+#statement img {
+  text-align: center;
+  width: 35vh;
+}
+@media (min-width: 768px) {
+  #statement {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+    grid-template-columns: 50% 50%;
+    contain: content;
+        grid-template-areas: "personal-statement home-prof";
+  }
+  #statement #personal-statement {
+    grid-area: personal-statement;
+    margin-left: 16px;
+    padding-top: 40px;
+    text-align: left;
+  }
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  #statement #personal-statement {
+    padding-top: 10vh;
+    padding-right: 24px;
+  }
+}
+@media (min-width: 768px) {
+  #statement #home-prof {
+    grid-area: home-prof;
+  }
+  #statement #home-prof img {
+    width: 50vh;
+  }
+}
+@media (min-width: 768px) {
+  #statement #personal-statement {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  #statement #home-prof {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+}
+
 #project-title {
   text-align: center;
   padding: 16px 48px;
