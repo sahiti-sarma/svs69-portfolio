@@ -938,22 +938,42 @@ header #logo-container {
 
 #favorites {
   text-align: center;
+  color: #206460;
 }
-
-#spotify {
-  text-align: center; /* Center the content horizontally */
+@media (min-width: 768px) {
+  #favorites {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "hobby spotify art";
+  }
 }
-
-#spotify h3 {
-  margin-bottom: 10px; /* Add some space below the heading */
+#favorites #spotify {
+  grid-area: spotify;
+  text-align: center;
 }
-
-#spotify iframe {
-  border-radius: 12px;
-  max-width: 100%;
-  width: 50%; /* Set the width of the iframe */
-  height: 50vh; /* Set the height of the iframe */
-  margin: 0 auto; /* Center the iframe horizontally */
+#favorites #hobby {
+  grid-area: hobby;
+  text-align: center;
+}
+#favorites #art {
+  grid-area: art;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  #favorites #spotify {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  #favorites #hobby {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  #favorites #art {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
 }
 
 #associations-title {
