@@ -3,15 +3,15 @@
   margin-top: 32px;
 }
 
-#associations{
+#associations {
   margin-top: 24px;
   background-color: #f1cbcc;
   display: grid;
   align-items: baseline;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: 
-  "active-minds uxpa"
-  "interaction-design accessibility";
+    "active-minds uxpa" 
+    "interaction-design accessibility";
 
 
   #active-minds{
