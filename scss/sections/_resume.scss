@@ -130,7 +130,6 @@
 #experience{
     margin-bottom: 24px;
     padding: 8px 16px;
-    border-bottom: 1px solid #aeaeb2;
 
     li{
         list-style: circle;
@@ -148,16 +147,5 @@
     padding-left: 10%;
     text-align: left;
     line-height: 30px;
-
-    li{
-        margin-bottom: 16px;
-    }
 }
 
-#relevantCoursework{
-    padding: 0 16px;
-
-    @include md{
-        padding: 0 24px;
-    }
-}

@@ -1,5 +1,26 @@
-#sitemap{
-    margin-top: 15vh;
-    padding-left: 8%;
+#sitemap h1 {
+    text-align: center;
+    margin-top: 10vh;
+
+    @include md{
+        margin-top: 30vh;
+    }
 }
 
+#sitemap-list {
+    padding: 32px;
+    margin-bottom: 48px;
+
+    @include md{
+        padding-left: 48px;
+    }
+}
+
+#sitemap-list li {
+    margin: 10px 0;
+    list-style-type: disc;
+}
+
+#sitemap-list a {
+    text-decoration: underline;
+}
