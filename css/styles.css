@@ -706,7 +706,12 @@ header #logo-container {
 
 .resumeContent {
   text-align: center;
-  margin-top: 200px;
+  margin-top: 100px;
+}
+@media (min-width: 768px) {
+  .resumeContent {
+    margin-top: 200px;
+  }
 }
 
 #resume-title {
@@ -1567,6 +1572,12 @@ textarea {
   border-radius: 10px;
   min-height: 150px;
 }
+#references #hari:hover, #references #hari:active {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  background-color: #206460;
+  color: white;
+}
 @media (min-width: 1024px) {
   #references #hari {
     margin: 48px;
@@ -1587,6 +1598,12 @@ textarea {
   color: #222;
   border-radius: 10px;
   min-height: 150px;
+}
+#references #shruthi:hover, #references #shruthi:active {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  background-color: #206460;
+  color: white;
 }
 @media (min-width: 1024px) {
   #references #shruthi {
@@ -1622,6 +1639,12 @@ textarea {
     -ms-grid-row: 1;
     -ms-grid-column: 3;
   }
+}
+#references #neeha:hover, #references #neeha:active {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  background-color: #206460;
+  color: white;
 }
 @media (min-width: 1024px) {
   #references #neeha {
