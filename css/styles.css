@@ -1524,3 +1524,109 @@ textarea {
 #sitemap-list a {
   text-decoration: underline;
 }
+
+#references-title {
+  text-align: center;
+  margin-top: 100px;
+}
+@media (min-width: 768px) {
+  #references-title {
+    margin-top: 200px;
+  }
+}
+
+#references {
+  margin-top: 24px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: (1fr)[1];
+  grid-template-columns: repeat(1, 1fr);
+      grid-template-areas: "hari" "shruthi" "neeha";
+}
+@media (min-width: 1024px) {
+  #references {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "hari shruthi neeha";
+  }
+}
+#references #hari {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: hari;
+  text-align: center;
+  margin: 8px 12vh;
+  padding: 16px;
+  line-height: 32px;
+  background-color: transparent;
+  border: 1px solid #206460;
+  color: #222;
+  border-radius: 10px;
+  min-height: 150px;
+}
+@media (min-width: 1024px) {
+  #references #hari {
+    margin: 48px;
+    padding: 0 72px;
+    min-height: 300px;
+  }
+}
+#references #shruthi {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: shruthi;
+  text-align: center;
+  margin: 8px 12vh;
+  padding: 16px;
+  line-height: 32px;
+  background-color: transparent;
+  border: 1px solid #206460;
+  color: #222;
+  border-radius: 10px;
+  min-height: 150px;
+}
+@media (min-width: 1024px) {
+  #references #shruthi {
+    margin: 48px;
+    padding: 0 72px;
+    min-height: 300px;
+  }
+}
+#references #neeha {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: neeha;
+  text-align: center;
+  margin: 8px 12vh;
+  padding: 16px;
+  line-height: 32px;
+  background-color: transparent;
+  border: 1px solid #206460;
+  color: #222;
+  border-radius: 10px;
+  min-height: 150px;
+}
+@media (min-width: 1024px) {
+  #references #hari {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  #references #shruthi {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  #references #neeha {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+}
+@media (min-width: 1024px) {
+  #references #neeha {
+    margin: 48px;
+    padding: 0 72px;
+    min-height: 300px;
+  }
+}
