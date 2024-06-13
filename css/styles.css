@@ -1496,12 +1496,12 @@ textarea {
   }
 }
 
-#sitemap h1 {
+#sitemap-container h1 {
   text-align: center;
   margin-top: 10vh;
 }
 @media (min-width: 768px) {
-  #sitemap h1 {
+  #sitemap-container h1 {
     margin-top: 30vh;
   }
 }
