@@ -16,7 +16,7 @@ header{
     background-color: #fff;
 
     @include md{
-        grid-template-columns: 60% auto;
+        grid-template-columns: 70% auto;
         grid-template-areas: 
         "logo-container logo-container"
         "main-nav contact-container"

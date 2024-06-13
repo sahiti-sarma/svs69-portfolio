@@ -497,8 +497,8 @@ header {
 }
 @media (min-width: 768px) {
   header {
-    -ms-grid-columns: 60% auto;
-    grid-template-columns: 60% auto;
+    -ms-grid-columns: 70% auto;
+    grid-template-columns: 70% auto;
         grid-template-areas: "logo-container logo-container" "main-nav contact-container";
   }
 }
